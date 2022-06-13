@@ -1,4 +1,4 @@
-package com.wangjing.androidutils;
+package com.wangjing.androidutilsdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
