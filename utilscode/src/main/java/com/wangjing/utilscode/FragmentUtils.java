@@ -68,6 +68,46 @@ public class FragmentUtils {
     }
 
     /**
+     * Add fragment.
+     *
+     * @param fm          The manager of fragment.
+     * @param adds        The fragments will be add.
+     * @param containerId The id of container.
+     * @param showIndex   The index of fragment will be shown.
+     */
+    public static void add(@NonNull final FragmentManager fm,
+                           @NonNull final List<Fragment> adds,
+                           @IdRes final int containerId,
+                           final int showIndex) {
+        add(fm, adds.toArray(new Fragment[0]), containerId, null, showIndex);
+    }
+
+    /**
+     * Add fragment.
+     *
+     * @param fm          The manager of fragment.
+     * @param adds        The fragments will be add.
+     * @param containerId The id of container.
+     * @param showIndex   The index of fragment will be shown.
+     */
+    public static void add(@NonNull final FragmentManager fm,
+                           @NonNull final Fragment[] adds,
+                           @IdRes final int containerId,
+                           final String[] tags,
+                           final int showIndex) {
+        if (tags == null) {
+            for (int i = 0, len = adds.length; i < len; ++i) {
+                putArgs(adds[i], new Args(containerId, null, showIndex != i, false));
+            }
+        } else {
+            for (int i = 0, len = adds.length; i < len; ++i) {
+                putArgs(adds[i], new Args(containerId, tags[i], showIndex != i, false));
+            }
+        }
+        operateNoAnim(TYPE_ADD_FRAGMENT, fm, null, adds);
+    }
+
+    /**
      * Show fragment.
      *
      * @param show The fragment will be show.

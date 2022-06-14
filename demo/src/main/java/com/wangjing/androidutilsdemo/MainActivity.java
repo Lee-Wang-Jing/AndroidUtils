@@ -33,18 +33,20 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void initFragment() {
-        fragment1 = new Fragment1();
-        fragment2 = new Fragment2();
-        fragment3 = new Fragment3();
-        FragmentUtils.add(getSupportFragmentManager(), fragment1, R.id.container);
-        FragmentUtils.add(getSupportFragmentManager(), fragment2, R.id.container);
-        FragmentUtils.add(getSupportFragmentManager(), fragment3, R.id.container);
-        FragmentUtils.hide(getSupportFragmentManager());
-        switchFragment(fragment1);
+        FragmentUtils.add(getSupportFragmentManager(), getFragmentList(), R.id.container, 0);
     }
 
     private List<Fragment> getFragmentList() {
         fragmentList.clear();
+        if (fragment1 == null) {
+            fragment1 = new Fragment1();
+        }
+        if (fragment2 == null) {
+            fragment2 = new Fragment2();
+        }
+        if (fragment3 == null) {
+            fragment3 = new Fragment3();
+        }
         fragmentList.add(fragment1);
         fragmentList.add(fragment2);
         fragmentList.add(fragment3);
@@ -83,26 +85,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             nowFragmentPosition = 2;
         } else {
             nowFragmentPosition = 0;
-        }
-    }
-
-    private Fragment getNowFragment(int nowFragment) {
-        switch (nowFragment) {
-            case 1:
-                if (fragment2 == null) {
-                    fragment2 = new Fragment2();
-                }
-                return fragment2;
-            case 2:
-                if (fragment3 == null) {
-                    fragment3 = new Fragment3();
-                }
-                return fragment3;
-            default:
-                if (fragment1 == null) {
-                    fragment1 = new Fragment1();
-                }
-                return fragment1;
         }
     }
 }
