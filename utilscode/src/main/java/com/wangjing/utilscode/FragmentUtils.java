@@ -88,6 +88,19 @@ public class FragmentUtils {
     }
 
     /**
+     * Hide fragment.
+     *
+     * @param fm The manager of fragment.
+     */
+    public static void hide(@NonNull final FragmentManager fm) {
+        List<Fragment> fragments = getFragments(fm);
+        for (Fragment hide : fragments) {
+            putArgs(hide, true);
+        }
+        operateNoAnim(TYPE_HIDE_FRAGMENT, fm, null, fragments.toArray(new Fragment[0]));
+    }
+
+    /**
      * Show fragment then hide other fragment.
      *
      * @param show The fragment will be show.
@@ -109,6 +122,18 @@ public class FragmentUtils {
             putArgs(fragment, fragment != show);
         }
         operateNoAnim(TYPE_SHOW_HIDE_FRAGMENT, show.getParentFragmentManager(), show, hide.toArray(new Fragment[0]));
+    }
+
+    /**
+     * Return the fragments in manager.
+     *
+     * @param fm The manager of fragment.
+     * @return the fragments in manager
+     */
+    public static List<Fragment> getFragments(@NonNull final FragmentManager fm) {
+        List<Fragment> fragments = fm.getFragments();
+        if (fragments == null || fragments.isEmpty()) return Collections.emptyList();
+        return fragments;
     }
 
     private static void putArgs(final Fragment fragment, final boolean isHide) {
