@@ -4,6 +4,8 @@ plugins {
     id 'com.android.library' version '7.2.1' apply false
 }
 
+apply from: "versions.gradle"
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

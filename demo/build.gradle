@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk rootProject.ext.android.compileSdk
 
     defaultConfig {
         applicationId "com.wangjing.androidutilsdemo"
-        minSdk 21
-        targetSdk 31
+        minSdk rootProject.ext.android.minSdk
+        targetSdk rootProject.ext.android.targetSdk
         versionCode 1
         versionName "1.0"
     }
@@ -28,8 +28,10 @@ android {
 dependencies {
 
     implementation project(':utilscode')
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.publicImplementation.appcompat"
+    implementation "com.google.android.material:material:$rootProject.ext.publicImplementation.material"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.ext.publicImplementation.swiperefreshlayout"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.publicImplementation.constraintlayout"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.ext.publicImplementation.recyclerview"
+
 }
