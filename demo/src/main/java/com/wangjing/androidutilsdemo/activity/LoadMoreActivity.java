@@ -15,7 +15,7 @@ public class LoadMoreActivity extends BaseActivity {
 
 
     private SwipeRefreshLayout swipeRefreshLayout;
-    private RecyclerView recyclerview;
+    private RecyclerView recyclerView;
     private LoadMoreActivityAdapter loadMoreActivityAdapter;
 
     @Override
@@ -32,14 +32,18 @@ public class LoadMoreActivity extends BaseActivity {
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setColorSchemeResources(R.color.purple_200, R.color.purple_500, R.color.purple_700);
         swipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.black);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+        });
     }
 
     private void initRecyclerView() {
-        recyclerview = findViewById(R.id.recyclerview);
-        recyclerview.setLayoutManager(new LinearLayoutManager(this));//线性布局管理器
-//        recyclerview.setLayoutManager(new GridLayoutManager(this, 4));//网格布局管理器
-//        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));//瀑布流布局管理器
-        loadMoreActivityAdapter = new LoadMoreActivityAdapter(this, null);
-        recyclerview.setAdapter(loadMoreActivityAdapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));//线性布局管理器
+        loadMoreActivityAdapter = new LoadMoreActivityAdapter(R.layout.item_loadmoreactivityadapter, null);
+        recyclerView.setAdapter(loadMoreActivityAdapter);
     }
 }

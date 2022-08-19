@@ -26,5 +26,5 @@ android {
 
 dependencies {
     compileOnly "androidx.appcompat:appcompat:$rootProject.ext.publicImplementation.appcompat"
-    implementation "com.github.youlookwhat:ByRecyclerView:$rootProject.ext.publicImplementation.ByRecyclerView"
+    api "com.github.youlookwhat:ByRecyclerView:$rootProject.ext.publicImplementation.ByRecyclerView"
 }

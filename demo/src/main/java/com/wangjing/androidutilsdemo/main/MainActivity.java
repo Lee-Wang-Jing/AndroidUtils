@@ -1,4 +1,4 @@
-package com.wangjing.androidutilsdemo;
+package com.wangjing.androidutilsdemo.main;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.wangjing.androidutilsdemo.R;
 import com.wangjing.androidutilsdemo.base.BaseActivity;
 import com.wangjing.androidutilsdemo.fragment.Fragment1;
 import com.wangjing.androidutilsdemo.fragment.Fragment2;
