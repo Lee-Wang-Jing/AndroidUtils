@@ -11,7 +11,12 @@ import androidx.annotation.Nullable;
 import com.wangjing.androidutilsdemo.R;
 import com.wangjing.androidutilsdemo.base.BaseFragment;
 
+import me.jingbin.library.ByRecyclerView;
+
 public class ComponentsFragment extends BaseFragment {
+
+
+    private ByRecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -22,6 +27,6 @@ public class ComponentsFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        recyclerView = view.findViewById(R.id.recyclerView);
     }
 }
