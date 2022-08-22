@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button btn_tab1, btn_tab2, btn_tab3;
-    private Fragment fragment1, fragment2, fragment3;
+    private Fragment fragment_components, fragment2, fragment3;
     private List<Fragment> fragmentList = new ArrayList<>();
     private int nowFragmentPosition = 0;
 
@@ -39,8 +39,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private List<Fragment> getFragmentList() {
         fragmentList.clear();
-        if (fragment1 == null) {
-            fragment1 = new Fragment1();
+        if (fragment_components == null) {
+            fragment_components = new ComponentsFragment();
         }
         if (fragment2 == null) {
             fragment2 = new Fragment2();
@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (fragment3 == null) {
             fragment3 = new Fragment3();
         }
-        fragmentList.add(fragment1);
+        fragmentList.add(fragment_components);
         fragmentList.add(fragment2);
         fragmentList.add(fragment3);
         return fragmentList;
@@ -66,7 +66,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btn_tab1) {
-            switchFragment(fragment1);
+            switchFragment(fragment_components);
         } else if (view.getId() == R.id.btn_tab2) {
             switchFragment(fragment2);
         } else if (view.getId() == R.id.btn_tab3) {

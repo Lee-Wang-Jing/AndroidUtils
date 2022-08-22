@@ -7,16 +7,24 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.wangjing.androidutilsdemo.R;
+import com.wangjing.androidutilsdemo.adapter.ComponentsFragmentAdapter;
 import com.wangjing.androidutilsdemo.base.BaseFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import me.jingbin.library.ByRecyclerView;
+import me.jingbin.library.decoration.GridSpaceItemDecoration;
 
 public class ComponentsFragment extends BaseFragment {
 
 
     private ByRecyclerView recyclerView;
+    private ComponentsFragmentAdapter adapter;
+    private List<String> datas = new ArrayList<>();
 
     @Nullable
     @Override
@@ -28,5 +36,14 @@ public class ComponentsFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.recyclerView);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 3);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        GridSpaceItemDecoration itemDecoration = new GridSpaceItemDecoration(10, true)
+                .setNoShowSpace(0, 0);
+        recyclerView.addItemDecoration(itemDecoration);
+        datas.add("Fragment");
+        datas.add("RecyclerView");
+        adapter = new ComponentsFragmentAdapter(R.layout.item_fragment_components, datas);
+        recyclerView.setAdapter(adapter);
     }
 }
