@@ -45,5 +45,11 @@ public class ComponentsFragment extends BaseFragment {
         datas.add("RecyclerView");
         adapter = new ComponentsFragmentAdapter(R.layout.item_fragment_components, datas);
         recyclerView.setAdapter(adapter);
+        recyclerView.setOnItemClickListener(new ByRecyclerView.OnItemClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+
+            }
+        });
     }
 }

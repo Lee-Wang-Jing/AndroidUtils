@@ -1,5 +1,7 @@
 package com.wangjing.androidutilsdemo.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -13,6 +15,9 @@ import com.wangjing.androidutilsdemo.base.BaseActivity;
 
 public class LoadMoreActivity extends BaseActivity {
 
+    public static void jump(Context context) {
+        context.startActivity(new Intent(context, LoadMoreActivity.class));
+    }
 
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
