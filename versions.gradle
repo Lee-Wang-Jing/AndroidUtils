@@ -6,7 +6,7 @@ ext {
             is_application: true
     ]
     publicImplementation = [
-            appcompat         : "1.5.0",
+            appcompat         : "1.5.1",
             constraintlayout  : "2.0.4",
             swiperefreshlayout: "1.1.0",
             constraintlayout  : "2.1.4",
