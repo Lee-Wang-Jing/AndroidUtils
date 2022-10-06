@@ -1,5 +1,7 @@
 package com.wangjing.androidutilsdemo.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +19,11 @@ import com.wangjing.utilscode.FragmentUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentActivity extends BaseActivity implements View.OnClickListener {
+public class FragmentDemoActivity extends BaseActivity implements View.OnClickListener {
+
+    public static void jump(Context context) {
+        context.startActivity(new Intent(context, FragmentDemoActivity.class));
+    }
 
     private Button btn_tab1, btn_tab2, btn_tab3;
     private Fragment fragment1, fragment2, fragment3;
