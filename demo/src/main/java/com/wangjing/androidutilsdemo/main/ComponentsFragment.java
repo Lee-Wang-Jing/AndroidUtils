@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.wangjing.androidutilsdemo.R;
+import com.wangjing.androidutilsdemo.activity.FragmentDemoActivity;
 import com.wangjing.androidutilsdemo.adapter.ComponentsFragmentAdapter;
 import com.wangjing.androidutilsdemo.base.BaseFragment;
 
@@ -50,6 +51,11 @@ public class ComponentsFragment extends BaseFragment {
             @Override
             public void onClick(View v, int position) {
                 Toast.makeText(mContext, "点击了" + position, Toast.LENGTH_LONG).show();
+                if (datas.get(position).equals("Fragment")) {
+                    FragmentDemoActivity.jump(mContext);
+                } else if (datas.get(position).equals("RecyclerView")) {
+
+                }
             }
         });
     }
