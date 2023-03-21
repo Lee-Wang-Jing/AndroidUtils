@@ -3,7 +3,9 @@ package com.wangjing.widget.titlebar;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -72,7 +74,7 @@ public class TitleBar extends FrameLayout {
         mLeftText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_left_text);
         mLeftTextColor = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
         mLeftTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_size, ConvertUtils.sp2px(18));
-        mLeftImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_left_image, R.mipmap.wj_ic_back);
+        mLeftImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_left_image, -1);
 
         mCenterText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_center_text);
         mCenterTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_center_text_color, Color.parseColor("#666666"));
@@ -102,10 +104,165 @@ public class TitleBar extends FrameLayout {
     }
 
     private void initListener() {
-
     }
 
     private void initViewData() {
+        hideAllWithStyle();
 
+        if (!TextUtils.isEmpty(mLeftText)) {
+            tv_left_text.setText("" + mLeftText);
+            tv_left_text.setTextColor(mLeftTextColor);
+            tv_left_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, mLeftTextSize);
+        } else {
+            if (mLeftImageResId != -1) {
+                iv_left_image.setImageResource(mLeftImageResId);
+            }
+        }
+
+        if (!TextUtils.isEmpty(mCenterText)) {
+            tv_center_text.setText("" + mCenterText);
+            tv_center_text.setTextColor(mCenterTextColor);
+            tv_center_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, mCenterTextSize);
+        }
+
+        if (!TextUtils.isEmpty(mRightText)) {
+            tv_right_text.setText("" + mRightText);
+            tv_right_text.setTextColor(mRightTextColor);
+            tv_right_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, mRightTextSize);
+        } else {
+            if (mRightImageResId != -1) {
+                iv_right_image.setImageResource(mRightImageResId);
+            }
+        }
     }
+
+    private void hideAllWithStyle() {
+        if (mStyle == 0) {
+            //图片 文本 无 默认样式
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 1) {
+            //图片 文本 图片
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 2) {
+            //图片 文本 文本
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 3) {
+            //文本 文本 无
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 4) {
+            //文本 文本 图片
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 5) {
+            //文本 文本 文本
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 6) {
+            //图片 无 无
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 7) {
+            //图片 无 图片
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 8) {
+            //图片 无 文本
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 9) {
+            //文本 无 无
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 10) {
+            //文本 无 图片
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 11) {
+            //文本 无 文本
+            tv_left_text.setVisibility(VISIBLE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
+        } else {
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        }
+    }
+
+    public void setCenterTitle(String title) {
+        if (!TextUtils.isEmpty(title)) {
+            tv_center_text.setVisibility(VISIBLE);
+            tv_center_text.setText("" + title);
+        }
+    }
+
+    public void setLeftOnClick(OnClickListener onClickListener) {
+        fl_left.setOnClickListener(onClickListener);
+    }
+
+    public void setRightOnClick(OnClickListener onClickListener) {
+        fl_right.setOnClickListener(onClickListener);
+    }
+
+    public TextView getTv_left_text() {
+        return tv_left_text;
+    }
+
+    public ImageView getIv_left_image() {
+        return iv_left_image;
+    }
+
+    public TextView getTv_center_text() {
+        return tv_center_text;
+    }
+
+    public TextView getTv_right_text() {
+        return tv_right_text;
+    }
+
+    public ImageView getIv_right_image() {
+        return iv_right_image;
+    }
+
 }

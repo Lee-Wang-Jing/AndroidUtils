@@ -28,13 +28,13 @@ public @interface TitletBarStyle {
     int STYLE_0 = 0;//图片 文本 无 默认样式
     int STYLE_1 = 1;//图片 文本 图片
     int STYLE_2 = 2;//图片 文本 文本
-    int STYLE_3 = 3;//文本 文本 无 默认样式
+    int STYLE_3 = 3;//文本 文本 无
     int STYLE_4 = 4;//文本 文本 图片
     int STYLE_5 = 5;//文本 文本 文本
-    int STYLE_6 = 6;//图片 无 无 默认样式
+    int STYLE_6 = 6;//图片 无 无
     int STYLE_7 = 7;//图片 无 图片
     int STYLE_8 = 8;//图片 无 文本
-    int STYLE_9 = 9;//文本 无 无 默认样式
+    int STYLE_9 = 9;//文本 无 无
     int STYLE_10 = 10;//文本 无 图片
     int STYLE_11 = 11;//文本 无 文本
 }
