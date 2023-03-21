@@ -33,6 +33,24 @@ public class TitleBar extends FrameLayout {
 
     private Context mContext;
 
+
+    protected String mLeftText;
+    protected int mLeftTextColor;
+    protected float mLeftTextSize;
+    protected int mLeftImageResId;
+
+
+    protected String mCenterText;
+    protected int mCenterTextColor;
+    protected float mCenterTextSize;
+
+
+    protected String mRightText;
+    protected int mRightTextColor;
+    protected float mRightTextSize;
+    protected int mRightImageResId;
+    protected int mStyle = TitleBarStyle.STYLE_0;
+
     public TitleBar(@NonNull Context context) {
         this(context, null);
     }
@@ -52,23 +70,6 @@ public class TitleBar extends FrameLayout {
         initViewData();
     }
 
-    protected String mLeftText;
-    protected int mLeftTextColor;
-    protected float mLeftTextSize;
-    protected int mLeftImageResId;
-
-
-    protected String mCenterText;
-    protected int mCenterTextColor;
-    protected float mCenterTextSize;
-
-
-    protected String mRightText;
-    protected int mRightTextColor;
-    protected float mRightTextSize;
-    protected int mRightImageResId;
-    protected int mStyle = TitletBarStyle.STYLE_0;
-
     private void initAttribute(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.WJ_TitleBar);
         mLeftText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_left_text);
@@ -85,7 +86,7 @@ public class TitleBar extends FrameLayout {
         mRightTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_text_color, Color.parseColor("#666666"));
         mRightTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_right_text_size, ConvertUtils.sp2px(18));
         mRightImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_right_image, -1);
-        mStyle = typedArray.getInteger(R.styleable.WJ_TitleBar_titleBar_style, TitletBarStyle.STYLE_0);
+        mStyle = typedArray.getInteger(R.styleable.WJ_TitleBar_titleBar_style, TitleBarStyle.STYLE_0);
         typedArray.recycle();
     }
 
@@ -230,9 +231,16 @@ public class TitleBar extends FrameLayout {
         }
     }
 
+    /**
+     * @param style 设置显示样式 具体看 @TitleBarStyle
+     */
+    public void setTitleBarStyle(@TitleBarStyle int style) {
+        mStyle = style;
+        initViewData();
+    }
+
     public void setCenterTitle(String title) {
         if (!TextUtils.isEmpty(title)) {
-            tv_center_text.setVisibility(VISIBLE);
             tv_center_text.setText("" + title);
         }
     }
@@ -245,23 +253,23 @@ public class TitleBar extends FrameLayout {
         fl_right.setOnClickListener(onClickListener);
     }
 
-    public TextView getTv_left_text() {
+    public TextView getLeftTextView() {
         return tv_left_text;
     }
 
-    public ImageView getIv_left_image() {
+    public ImageView getLeftImageView() {
         return iv_left_image;
     }
 
-    public TextView getTv_center_text() {
+    public TextView getCenterTextView() {
         return tv_center_text;
     }
 
-    public TextView getTv_right_text() {
+    public TextView getRightTextView() {
         return tv_right_text;
     }
 
-    public ImageView getIv_right_image() {
+    public ImageView getRightImageView() {
         return iv_right_image;
     }
 

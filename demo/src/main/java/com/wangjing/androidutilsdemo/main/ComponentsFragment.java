@@ -1,5 +1,6 @@
 package com.wangjing.androidutilsdemo.main;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.wangjing.androidutilsdemo.R;
 import com.wangjing.androidutilsdemo.activity.FragmentDemoActivity;
 import com.wangjing.androidutilsdemo.adapter.ComponentsFragmentAdapter;
 import com.wangjing.androidutilsdemo.base.BaseFragment;
+import com.wangjing.widget.titlebar.TitleBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ import me.jingbin.library.decoration.GridSpaceItemDecoration;
 public class ComponentsFragment extends BaseFragment {
 
 
+    private TitleBar title_bar;
     private ByRecyclerView recyclerView;
     private ComponentsFragmentAdapter adapter;
     private List<String> datas = new ArrayList<>();
@@ -37,6 +40,8 @@ public class ComponentsFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        title_bar = view.findViewById(R.id.title_bar);
+        title_bar.getLeftTextView().setTypeface(title_bar.getLeftTextView().getTypeface(), Typeface.BOLD);
         recyclerView = view.findViewById(R.id.recyclerView);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 3);
         recyclerView.setLayoutManager(gridLayoutManager);

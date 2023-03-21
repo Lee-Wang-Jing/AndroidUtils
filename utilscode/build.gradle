@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    compileOnly "androidx.appcompat:appcompat:$rootProject.ext.publicImplementation.appcompat"
+    api "androidx.appcompat:appcompat:$rootProject.ext.publicImplementation.appcompat"
     api "com.github.youlookwhat:ByRecyclerView:$rootProject.ext.publicImplementation.ByRecyclerView"
     api "com.github.bumptech.glide:glide:$rootProject.ext.publicImplementation.glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.publicImplementation.glide_compiler"

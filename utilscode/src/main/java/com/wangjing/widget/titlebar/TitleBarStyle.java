@@ -6,21 +6,21 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @IntDef({
-        TitletBarStyle.STYLE_0,
-        TitletBarStyle.STYLE_1,
-        TitletBarStyle.STYLE_2,
-        TitletBarStyle.STYLE_3,
-        TitletBarStyle.STYLE_4,
-        TitletBarStyle.STYLE_5,
-        TitletBarStyle.STYLE_6,
-        TitletBarStyle.STYLE_7,
-        TitletBarStyle.STYLE_8,
-        TitletBarStyle.STYLE_9,
-        TitletBarStyle.STYLE_10,
-        TitletBarStyle.STYLE_11,
+        TitleBarStyle.STYLE_0,
+        TitleBarStyle.STYLE_1,
+        TitleBarStyle.STYLE_2,
+        TitleBarStyle.STYLE_3,
+        TitleBarStyle.STYLE_4,
+        TitleBarStyle.STYLE_5,
+        TitleBarStyle.STYLE_6,
+        TitleBarStyle.STYLE_7,
+        TitleBarStyle.STYLE_8,
+        TitleBarStyle.STYLE_9,
+        TitleBarStyle.STYLE_10,
+        TitleBarStyle.STYLE_11,
 })
 @Retention(RetentionPolicy.SOURCE)
-public @interface TitletBarStyle {
+public @interface TitleBarStyle {
 
     /**
      * 图片 文本 无 默认样式
