@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--titlebar属性避免冲突添加前缀-->
+    <declare-styleable name="WJ_TitleBar">
+
+        <!--左边-->
+        <attr name="titleBar_left_text" format="string" /> <!--左边文本-->
+        <attr name="titleBar_left_text_size" format="dimension" /> <!--左边文字大小-->
+        <attr name="titleBar_left_text_color" format="color" /> <!--左边文字颜色-->
+        <attr name="titleBar_left_image" format="reference" /> <!--左边图片-->
+
+
+        <attr name="titleBar_center_text" format="string" /> <!--中间的标题-->
+        <attr name="titleBar_center_text_size" format="dimension" /> <!--中间边文字大小-->
+        <attr name="titleBar_center_text_color" format="color" /> <!--中间文字颜色-->
+
+
+        <!-- 右边-->
+        <attr name="titleBar_right_text" format="string" /> <!--右边文本-->
+        <attr name="titleBar_right_text_size" format="dimension" /> <!--右边文字大小-->
+        <attr name="titleBar_right_text_color" format="color" /> <!--右边文字颜色-->
+        <attr name="titleBar_right_image" format="reference" /> <!--右边图片-->
+
+        <attr name="titleBar_style">
+            <enum name="style_0" value="0" />   <!-- 图片 文本 无 默认样式 -->
+            <enum name="style_1" value="1" />   <!-- 图片 文本 图片 -->
+            <enum name="style_2" value="2" />   <!-- 图片 文本 文本 -->
+
+            <enum name="style_3" value="3" />   <!-- 文本 文本 无 默认样式 -->
+            <enum name="style_4" value="4" />   <!-- 文本 文本 图片 -->
+            <enum name="style_5" value="5" />   <!-- 文本 文本 文本 -->
+
+            <enum name="style_6" value="6" />   <!-- 图片 无 无 默认样式 -->
+            <enum name="style_7" value="7" />   <!-- 图片 无 图片 -->
+            <enum name="style_8" value="8" />   <!-- 图片 无 文本 -->
+
+            <enum name="style_9" value="9" />   <!-- 文本 无 无 默认样式 -->
+            <enum name="style_10" value="10" /> <!-- 文本 无 图片 -->
+            <enum name="style_11" value="11" /> <!-- 文本 无 文本 -->
+        </attr>
+
+
+    </declare-styleable>
+</resources>
+
