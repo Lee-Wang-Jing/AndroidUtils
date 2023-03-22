@@ -4,10 +4,8 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +16,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import com.wangjing.utilscode.ConvertUtils;
 import com.wangjing.utilscode.R;
@@ -93,7 +90,7 @@ public class TitleBar extends FrameLayout {
         mLeftTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
         mLeftTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_size, ConvertUtils.sp2px(18));
         mLeftImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_left_image, -1);
-        mLeftImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_image_tint, -1);
+        mLeftImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_image_tint, 0);
 
         mCenterText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_center_text);
         mCenterTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_center_text_color, Color.parseColor("#666666"));
@@ -104,7 +101,7 @@ public class TitleBar extends FrameLayout {
         mRightTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_text_color, Color.parseColor("#666666"));
         mRightTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_right_text_size, ConvertUtils.sp2px(18));
         mRightImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_right_image, -1);
-        mRightImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_image_tint, -1);
+        mRightImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_image_tint, 0);
 
         mBottomLineHeight = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_bottom_line_height, 1);
         mBottomLineColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_bottom_line_color, Color.parseColor("#666666"));
@@ -151,16 +148,12 @@ public class TitleBar extends FrameLayout {
             tv_left_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, mLeftTextSize);
         } else {
             if (mLeftImageResId != -1) {
-                Drawable drawable = ContextCompat.getDrawable(mContext, mLeftImageResId);
-//                iv_left_image.setImageResource(mLeftImageResId);
-                if (mLeftImageTintColor != -1) {
-                    Log.e("DebugWJ", "mLeftImageTintColor!=-1");
-                    iv_left_image.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, mLeftImageTintColor)));
-//                    iv_left_image.setImageTintList(ColorStateList.valueOf(mLeftImageTintColor));
-                } else {
-                    Log.e("DebugWJ", "mLeftImageTintColor==-1");
+//                Drawable drawable = ContextCompat.getDrawable(mContext, mLeftImageResId);
+                iv_left_image.setImageResource(mLeftImageResId);
+                if (mLeftImageTintColor != 0) {
+                    iv_left_image.setImageTintList(ColorStateList.valueOf(mLeftImageTintColor));
                 }
-                iv_left_image.setImageDrawable(drawable);
+//                iv_left_image.setImageDrawable(drawable);
             }
         }
 
@@ -177,7 +170,7 @@ public class TitleBar extends FrameLayout {
         } else {
             if (mRightImageResId != -1) {
                 iv_right_image.setImageResource(mRightImageResId);
-                if (mRightImageTintColor != -1) {
+                if (mRightImageTintColor != 0) {
                     iv_right_image.setImageTintList(ColorStateList.valueOf(mRightImageTintColor));
                 }
             }

@@ -25,380 +25,380 @@
             app:titleBar_style="style_0" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="0、style_0 &#45;&#45; 图片 文本 无 默认样式"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0、style_0 -- 图片 文本 无 默认样式"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar0"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="图片 文本 无 默认样式"-->
-<!--            app:titleBar_center_text_color="@color/white"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_left_image_tint="@color/white"-->
-<!--            app:titleBar_style="style_0" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="图片 文本 无 默认样式"
+            app:titleBar_center_text_color="@color/white"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_left_image_tint="@color/white"
+            app:titleBar_style="style_0" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="1、style_1 &#45;&#45; 图片 文本 图片"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="1、style_1 -- 图片 文本 图片"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="图片 文本 图片"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_1" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="图片 文本 图片"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_1" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="2、style_2 &#45;&#45; 图片 文本 文本"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="2、style_2 -- 图片 文本 文本"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="图片 文本 文本"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/white"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_2" />-->
-
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="3、style_3 &#45;&#45; 文本 文本 无"-->
-<!--            android:textSize="18sp" />-->
-
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="文本 文本 无"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/white"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_style="style_3" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="图片 文本 文本"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/white"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_2" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="4、style_4 &#45;&#45; 文本 文本 图片"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="3、style_3 -- 文本 文本 无"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="文本 文本 图片"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/black"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_4" />-->
-
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="5、style_5 &#45;&#45; 文本 文本 文本"-->
-<!--            android:textSize="18sp" />-->
-
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="文本 文本 文本"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/black"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/black"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_5" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="文本 文本 无"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/white"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_style="style_3" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="6、style_6 &#45;&#45; 图片 无 无"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="4、style_4 -- 文本 文本 图片"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar6"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_style="style_6" />-->
-
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="7、style_7 &#45;&#45; 图片 无 图片"-->
-<!--            android:textSize="18sp" />-->
-
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar7"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_7" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="文本 文本 图片"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_4" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="8、style_8 &#45;&#45; 图片 无 文本"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="5、style_5 -- 文本 文本 文本"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar8"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_image="@mipmap/wj_ic_back"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/black"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_8" />-->
-
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="9、style_9 &#45;&#45; 文本 无 无"-->
-<!--            android:textSize="18sp" />-->
-
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar9"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/black"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_style="style_9" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="文本 文本 文本"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_5" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="10、style_10 &#45;&#45; 文本 无 图片"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="6、style_6 -- 图片 无 无"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar10"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/black"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_10" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_style="style_6" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="11、style_11 &#45;&#45; 文本 无 文本"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="7、style_7 -- 图片 无 图片"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar11"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_left_text="文本"-->
-<!--            app:titleBar_left_text_color="@color/black"-->
-<!--            app:titleBar_left_text_size="18sp"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/black"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_11" />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="12、style_12 &#45;&#45; 无 文本 无"-->
-<!--            android:textSize="18sp" />-->
-
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar12"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="无 文本 无"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_style="style_12" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_7" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="13、style_13 &#45;&#45; 无 文本 图片"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="8、style_8 -- 图片 无 文本"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar13"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="无 文本 图片"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_13" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_8" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="14、style_14 &#45;&#45; 无 文本 文本"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="9、style_9 -- 文本 无 无"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar14"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_center_text="无 文本 文本"-->
-<!--            app:titleBar_center_text_color="@color/black"-->
-<!--            app:titleBar_center_text_size="18sp"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/black"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_14" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_style="style_9" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="15、style_15 &#45;&#45; 无 无 无"-->
-<!--            android:textSize="18sp" />-->
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar15"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_style="style_15" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="10、style_10 -- 文本 无 图片"
+            android:textSize="18sp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="16、style_16 &#45;&#45; 无 无 图片"-->
-<!--            android:textSize="18sp" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_10" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar16"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_right_image="@mipmap/ic_launcher"-->
-<!--            app:titleBar_style="style_16" />-->
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:padding="8dp"-->
-<!--            android:text="17、style_17 &#45;&#45; 无 无 文本"-->
-<!--            android:textSize="18sp" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="11、style_11 -- 文本 无 文本"
+            android:textSize="18sp" />
 
-<!--        <com.wangjing.widget.titlebar.TitleBar-->
-<!--            android:id="@+id/title_bar17"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:titleBar_background_color="#6fa8dc"-->
-<!--            app:titleBar_bottom_line_color="#000000"-->
-<!--            app:titleBar_bottom_line_height="1px"-->
-<!--            app:titleBar_right_text="文本"-->
-<!--            app:titleBar_right_text_color="@color/black"-->
-<!--            app:titleBar_right_text_size="18sp"-->
-<!--            app:titleBar_style="style_17" />-->
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_left_text="文本"
+            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_size="18sp"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="12、style_12 -- 无 文本 无"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="无 文本 无"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_style="style_12" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="13、style_13 -- 无 文本 图片"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="无 文本 图片"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_13" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="14、style_14 -- 无 文本 文本"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="无 文本 文本"
+            app:titleBar_center_text_color="@color/black"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="15、style_15 -- 无 无 无"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_style="style_15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="16、style_16 -- 无 无 图片"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_right_image="@mipmap/ic_launcher"
+            app:titleBar_style="style_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="17、style_17 -- 无 无 文本"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_right_text="文本"
+            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_size="18sp"
+            app:titleBar_style="style_17" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
