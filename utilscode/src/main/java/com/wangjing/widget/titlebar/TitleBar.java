@@ -217,8 +217,8 @@ public class TitleBar extends FrameLayout {
             iv_right_image.setVisibility(VISIBLE);
         } else if (mStyle == 8) {
             //图片 无 文本
-            tv_left_text.setVisibility(VISIBLE);
-            iv_left_image.setVisibility(GONE);
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(VISIBLE);
             tv_center_text.setVisibility(GONE);
             tv_right_text.setVisibility(VISIBLE);
             iv_right_image.setVisibility(GONE);

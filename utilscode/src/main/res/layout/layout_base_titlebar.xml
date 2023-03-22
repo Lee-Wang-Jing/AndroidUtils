@@ -35,7 +35,7 @@
             android:scaleType="centerInside"
             android:visibility="gone"
             tools:background="@mipmap/wj_ic_back"
-            tools:visibility="visible" />
+            tools:visibility="gone" />
     </FrameLayout>
 
 
@@ -61,7 +61,7 @@
             android:textSize="17sp"
             android:visibility="gone"
             tools:text="我是Center"
-            tools:visibility="visible" />
+            tools:visibility="gone" />
     </FrameLayout>
 
 
@@ -97,7 +97,7 @@
             android:scaleType="centerInside"
             android:visibility="gone"
             tools:background="@mipmap/wj_ic_back"
-            tools:visibility="visible" />
+            tools:visibility="gone" />
     </FrameLayout>
 
     <View
@@ -109,6 +109,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:visibility="visible" />
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
