@@ -79,7 +79,7 @@ public class TitleBar extends FrameLayout {
     private void initAttribute(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.WJ_TitleBar);
         mLeftText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_left_text);
-        mLeftTextColor = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
+        mLeftTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
         mLeftTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_size, ConvertUtils.sp2px(18));
         mLeftImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_left_image, -1);
 
