@@ -14,6 +14,8 @@
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
             app:titleBar_center_text="TitleBarDemoActivity"
             app:titleBar_center_text_color="@color/black"
             app:titleBar_center_text_size="18sp"

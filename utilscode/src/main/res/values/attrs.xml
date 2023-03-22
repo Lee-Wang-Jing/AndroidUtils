@@ -5,21 +5,24 @@
 
         <!--左边-->
         <attr name="titleBar_left_text" format="string" /> <!--左边文本-->
-        <attr name="titleBar_left_text_size" format="dimension" /> <!--左边文字大小-->
+        <attr name="titleBar_left_text_size" format="dimension" /> <!--左边文字大小 单位sp-->
         <attr name="titleBar_left_text_color" format="color" /> <!--左边文字颜色-->
         <attr name="titleBar_left_image" format="reference" /> <!--左边图片-->
 
 
         <attr name="titleBar_center_text" format="string" /> <!--中间的标题-->
-        <attr name="titleBar_center_text_size" format="dimension" /> <!--中间边文字大小-->
+        <attr name="titleBar_center_text_size" format="dimension" /> <!--中间边文字大小 单位sp-->
         <attr name="titleBar_center_text_color" format="color" /> <!--中间文字颜色-->
 
 
         <!-- 右边-->
         <attr name="titleBar_right_text" format="string" /> <!--右边文本-->
-        <attr name="titleBar_right_text_size" format="dimension" /> <!--右边文字大小-->
+        <attr name="titleBar_right_text_size" format="dimension" /> <!--右边文字大小 单位sp-->
         <attr name="titleBar_right_text_color" format="color" /> <!--右边文字颜色-->
         <attr name="titleBar_right_image" format="reference" /> <!--右边图片-->
+
+        <attr name="titleBar_bottom_line_height" format="dimension" /> <!--底部细线高度 单位dp/px-->
+        <attr name="titleBar_bottom_line_color" format="color" /> <!--底部细线颜色-->
 
         <attr name="titleBar_style">
             <enum name="style_0" value="0" />   <!-- 图片 文本 无 默认样式 -->

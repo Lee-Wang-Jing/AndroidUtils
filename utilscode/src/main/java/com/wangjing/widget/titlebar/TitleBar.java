@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,25 +32,30 @@ public class TitleBar extends FrameLayout {
     private TextView tv_right_text;
     private ImageView iv_right_image;
 
+    private View bottom_line;
+
     private Context mContext;
 
 
-    protected String mLeftText;
-    protected int mLeftTextColor;
-    protected float mLeftTextSize;
-    protected int mLeftImageResId;
+    private String mLeftText;
+    private int mLeftTextColor;
+    private float mLeftTextSize;
+    private int mLeftImageResId;
 
 
-    protected String mCenterText;
-    protected int mCenterTextColor;
-    protected float mCenterTextSize;
+    private String mCenterText;
+    private int mCenterTextColor;
+    private float mCenterTextSize;
 
 
-    protected String mRightText;
-    protected int mRightTextColor;
-    protected float mRightTextSize;
-    protected int mRightImageResId;
-    protected int mStyle = TitleBarStyle.STYLE_0;
+    private String mRightText;
+    private int mRightTextColor;
+    private float mRightTextSize;
+    private int mRightImageResId;
+
+    private int mBottomLineHeight;
+    private int mBottomLineColor;
+    private int mStyle = TitleBarStyle.STYLE_0;
 
     public TitleBar(@NonNull Context context) {
         this(context, null);
@@ -86,6 +92,10 @@ public class TitleBar extends FrameLayout {
         mRightTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_text_color, Color.parseColor("#666666"));
         mRightTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_right_text_size, ConvertUtils.sp2px(18));
         mRightImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_right_image, -1);
+
+        mBottomLineHeight = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_bottom_line_height, 1);
+        mBottomLineColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_bottom_line_color, Color.parseColor("#666666"));
+
         mStyle = typedArray.getInteger(R.styleable.WJ_TitleBar_titleBar_style, TitleBarStyle.STYLE_0);
         typedArray.recycle();
     }
@@ -102,6 +112,17 @@ public class TitleBar extends FrameLayout {
         fl_right = rootView.findViewById(R.id.fl_right);
         tv_right_text = rootView.findViewById(R.id.tv_right_text);
         iv_right_image = rootView.findViewById(R.id.iv_right_image);
+
+        bottom_line = rootView.findViewById(R.id.bottom_line);
+        if (mBottomLineHeight > 0) {
+            bottom_line.setVisibility(VISIBLE);
+            ViewGroup.LayoutParams params = bottom_line.getLayoutParams();
+            params.height = mBottomLineHeight;
+            bottom_line.setLayoutParams(params);
+            bottom_line.setBackgroundColor(mBottomLineColor);
+        } else {
+            bottom_line.setVisibility(GONE);
+        }
     }
 
     private void initListener() {
