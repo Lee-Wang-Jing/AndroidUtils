@@ -21,6 +21,29 @@
             app:titleBar_center_text_color="@color/white"
             app:titleBar_center_text_size="18sp"
             app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_left_image_tint="@color/white"
+            app:titleBar_style="style_0" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0、style_0 -- 图片 文本 无 默认样式"
+            android:textSize="18sp" />
+
+        <com.wangjing.widget.titlebar.TitleBar
+            android:id="@+id/title_bar0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleBar_background_color="#6fa8dc"
+            app:titleBar_bottom_line_color="#000000"
+            app:titleBar_bottom_line_height="1px"
+            app:titleBar_center_text="图片 文本 无 默认样式"
+            app:titleBar_center_text_color="@color/white"
+            app:titleBar_center_text_size="18sp"
+            app:titleBar_left_image="@mipmap/wj_ic_back"
+            app:titleBar_left_image_tint="@color/white"
             app:titleBar_style="style_0" />
 
         <TextView
@@ -63,7 +86,7 @@
             app:titleBar_center_text_size="18sp"
             app:titleBar_left_image="@mipmap/wj_ic_back"
             app:titleBar_right_text="文本"
-            app:titleBar_right_text_color="@color/black"
+            app:titleBar_right_text_color="@color/white"
             app:titleBar_right_text_size="18sp"
             app:titleBar_style="style_2" />
 
@@ -86,7 +109,7 @@
             app:titleBar_center_text_color="@color/black"
             app:titleBar_center_text_size="18sp"
             app:titleBar_left_text="文本"
-            app:titleBar_left_text_color="@color/black"
+            app:titleBar_left_text_color="@color/white"
             app:titleBar_left_text_size="18sp"
             app:titleBar_style="style_3" />
 

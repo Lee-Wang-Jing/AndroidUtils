@@ -10,6 +10,7 @@
         <attr name="titleBar_left_text_size" format="dimension" /> <!--左边文字大小 单位sp-->
         <attr name="titleBar_left_text_color" format="color" /> <!--左边文字颜色-->
         <attr name="titleBar_left_image" format="reference" /> <!--左边图片-->
+        <attr name="titleBar_left_image_tint" format="color" /> <!--左边图片 tintColor-->
 
 
         <attr name="titleBar_center_text" format="string" /> <!--中间的标题-->
@@ -22,6 +23,7 @@
         <attr name="titleBar_right_text_size" format="dimension" /> <!--右边文字大小 单位sp-->
         <attr name="titleBar_right_text_color" format="color" /> <!--右边文字颜色-->
         <attr name="titleBar_right_image" format="reference" /> <!--右边图片-->
+        <attr name="titleBar_right_image_tint" format="color" /> <!--右边图片 tintColor-->
 
         <attr name="titleBar_bottom_line_height" format="dimension" /> <!--底部细线高度 单位dp/px-->
         <attr name="titleBar_bottom_line_color" format="color" /> <!--底部细线颜色-->

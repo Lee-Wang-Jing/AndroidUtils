@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import com.wangjing.androidutilsdemo.R;
 import com.wangjing.androidutilsdemo.base.BaseActivity;
 import com.wangjing.widget.titlebar.TitleBar;
+import com.wangjing.widget.titlebar.TitleBarStyle;
 
 public class TitleBarDemoActivity extends BaseActivity {
     public static void jump(Context context) {
@@ -31,5 +32,8 @@ public class TitleBarDemoActivity extends BaseActivity {
                 onBackPressed();
             }
         });
+
+//        title_bar.getLeftImageView().setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white)));
+        title_bar.setTitleBarStyle(TitleBarStyle.STYLE_0);
     }
 }

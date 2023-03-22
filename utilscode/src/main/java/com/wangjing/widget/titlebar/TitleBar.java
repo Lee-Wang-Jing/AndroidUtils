@@ -1,10 +1,12 @@
 package com.wangjing.widget.titlebar;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.wangjing.utilscode.ConvertUtils;
 import com.wangjing.utilscode.R;
@@ -43,6 +46,7 @@ public class TitleBar extends FrameLayout {
     private int mLeftTextColor;
     private float mLeftTextSize;
     private int mLeftImageResId;
+    private int mLeftImageTintColor;
 
 
     private String mCenterText;
@@ -54,6 +58,7 @@ public class TitleBar extends FrameLayout {
     private int mRightTextColor;
     private float mRightTextSize;
     private int mRightImageResId;
+    private int mRightImageTintColor;
 
     private int mBottomLineHeight;
     private int mBottomLineColor;
@@ -87,6 +92,7 @@ public class TitleBar extends FrameLayout {
         mLeftTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
         mLeftTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_size, ConvertUtils.sp2px(18));
         mLeftImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_left_image, -1);
+        mLeftImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_image_tint, -1);
 
         mCenterText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_center_text);
         mCenterTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_center_text_color, Color.parseColor("#666666"));
@@ -97,6 +103,7 @@ public class TitleBar extends FrameLayout {
         mRightTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_text_color, Color.parseColor("#666666"));
         mRightTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_right_text_size, ConvertUtils.sp2px(18));
         mRightImageResId = typedArray.getResourceId(R.styleable.WJ_TitleBar_titleBar_right_image, -1);
+        mRightImageTintColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_right_image_tint, -1);
 
         mBottomLineHeight = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_bottom_line_height, 1);
         mBottomLineColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_bottom_line_color, Color.parseColor("#666666"));
@@ -144,6 +151,13 @@ public class TitleBar extends FrameLayout {
         } else {
             if (mLeftImageResId != -1) {
                 iv_left_image.setImageResource(mLeftImageResId);
+                if (mLeftImageTintColor != -1) {
+                    Log.e("DebugWJ", "mLeftImageTintColor!=-1");
+                    iv_left_image.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, mLeftImageTintColor)));
+//                    iv_left_image.setImageTintList(ColorStateList.valueOf(mLeftImageTintColor));
+                } else {
+                    Log.e("DebugWJ", "mLeftImageTintColor==-1");
+                }
             }
         }
 
@@ -160,6 +174,9 @@ public class TitleBar extends FrameLayout {
         } else {
             if (mRightImageResId != -1) {
                 iv_right_image.setImageResource(mRightImageResId);
+                if (mRightImageTintColor != -1) {
+                    iv_right_image.setImageTintList(ColorStateList.valueOf(mRightImageTintColor));
+                }
             }
         }
     }
