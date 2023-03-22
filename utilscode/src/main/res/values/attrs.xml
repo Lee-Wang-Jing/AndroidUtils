@@ -3,6 +3,8 @@
     <!--titlebar属性避免冲突添加前缀-->
     <declare-styleable name="WJ_TitleBar">
 
+        <attr name="titleBar_background_color" format="color" /> <!--titleBar背景颜色-->
+
         <!--左边-->
         <attr name="titleBar_left_text" format="string" /> <!--左边文本-->
         <attr name="titleBar_left_text_size" format="dimension" /> <!--左边文字大小 单位sp-->

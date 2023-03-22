@@ -21,6 +21,7 @@ import com.wangjing.utilscode.R;
 
 public class TitleBar extends FrameLayout {
 
+    private View rootView;
     private FrameLayout fl_left;
     private TextView tv_left_text;
     private ImageView iv_left_image;
@@ -37,6 +38,7 @@ public class TitleBar extends FrameLayout {
     private Context mContext;
 
 
+    private int mRootViewBackgroundColor;
     private String mLeftText;
     private int mLeftTextColor;
     private float mLeftTextSize;
@@ -69,7 +71,7 @@ public class TitleBar extends FrameLayout {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View rootView = layoutInflater.inflate(R.layout.layout_base_titlebar, this, true);
+        rootView = layoutInflater.inflate(R.layout.layout_base_titlebar, this, true);
         initAttribute(context, attrs);
         initView(rootView);
         initListener();
@@ -78,6 +80,9 @@ public class TitleBar extends FrameLayout {
 
     private void initAttribute(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.WJ_TitleBar);
+
+        mRootViewBackgroundColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_background_color, Color.parseColor("#ffffff"));
+
         mLeftText = typedArray.getString(R.styleable.WJ_TitleBar_titleBar_left_text);
         mLeftTextColor = typedArray.getColor(R.styleable.WJ_TitleBar_titleBar_left_text_color, Color.parseColor("#666666"));
         mLeftTextSize = typedArray.getDimensionPixelSize(R.styleable.WJ_TitleBar_titleBar_left_text_size, ConvertUtils.sp2px(18));
@@ -102,6 +107,7 @@ public class TitleBar extends FrameLayout {
 
 
     private void initView(View rootView) {
+        rootView.setBackgroundColor(mRootViewBackgroundColor);
         fl_left = rootView.findViewById(R.id.fl_left);
         tv_left_text = rootView.findViewById(R.id.tv_left_text);
         iv_left_image = rootView.findViewById(R.id.iv_left_image);
