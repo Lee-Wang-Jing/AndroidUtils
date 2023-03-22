@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -150,7 +151,8 @@ public class TitleBar extends FrameLayout {
             tv_left_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, mLeftTextSize);
         } else {
             if (mLeftImageResId != -1) {
-                iv_left_image.setImageResource(mLeftImageResId);
+                Drawable drawable = ContextCompat.getDrawable(mContext, mLeftImageResId);
+//                iv_left_image.setImageResource(mLeftImageResId);
                 if (mLeftImageTintColor != -1) {
                     Log.e("DebugWJ", "mLeftImageTintColor!=-1");
                     iv_left_image.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, mLeftImageTintColor)));
@@ -158,6 +160,7 @@ public class TitleBar extends FrameLayout {
                 } else {
                     Log.e("DebugWJ", "mLeftImageTintColor==-1");
                 }
+                iv_left_image.setImageDrawable(drawable);
             }
         }
 
