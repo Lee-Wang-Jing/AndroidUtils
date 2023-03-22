@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".activity.FragmentDemoActivity" />
         <activity android:name=".activity.LoadMoreActivity" />
+        <activity android:name=".activity.TitleBarDemoActivity" />
     </application>
 
 </manifest>

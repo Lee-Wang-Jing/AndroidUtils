@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.wangjing.androidutilsdemo.R;
 import com.wangjing.androidutilsdemo.activity.FragmentDemoActivity;
+import com.wangjing.androidutilsdemo.activity.TitleBarDemoActivity;
 import com.wangjing.androidutilsdemo.adapter.ComponentsFragmentAdapter;
 import com.wangjing.androidutilsdemo.base.BaseFragment;
 import com.wangjing.widget.titlebar.TitleBar;
@@ -50,6 +51,7 @@ public class ComponentsFragment extends BaseFragment {
         recyclerView.addItemDecoration(itemDecoration);
         datas.add("Fragment");
         datas.add("RecyclerView");
+        datas.add("TitleBar");
         adapter = new ComponentsFragmentAdapter(R.layout.item_fragment_components, datas);
         recyclerView.setAdapter(adapter);
         recyclerView.setOnItemClickListener(new ByRecyclerView.OnItemClickListener() {
@@ -60,6 +62,8 @@ public class ComponentsFragment extends BaseFragment {
                     FragmentDemoActivity.jump(mContext);
                 } else if (datas.get(position).equals("RecyclerView")) {
 
+                } else if (datas.get(position).equals("TitleBar")) {
+                    TitleBarDemoActivity.jump(mContext);
                 }
             }
         });

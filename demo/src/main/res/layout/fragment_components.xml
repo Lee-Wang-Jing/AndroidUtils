@@ -15,7 +15,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:titleBar_center_text="组件"
         app:titleBar_center_text_color="@color/black"
-        app:titleBar_center_text_size="18sp" />
+        app:titleBar_center_text_size="18sp"
+        app:titleBar_style="style_12" />
 
     <me.jingbin.library.ByRecyclerView
         android:id="@+id/recyclerView"

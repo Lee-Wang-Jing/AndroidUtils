@@ -222,6 +222,48 @@ public class TitleBar extends FrameLayout {
             tv_center_text.setVisibility(GONE);
             tv_right_text.setVisibility(VISIBLE);
             iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 12) {
+            //无 文本 无
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 13) {
+            //无 文本 图片
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 14) {
+            //无 文本 文本
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(VISIBLE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 15) {
+            //无 无 无
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(GONE);
+        } else if (mStyle == 16) {
+            //无 无 图片
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(GONE);
+            iv_right_image.setVisibility(VISIBLE);
+        } else if (mStyle == 17) {
+            //无 无 文本
+            tv_left_text.setVisibility(GONE);
+            iv_left_image.setVisibility(GONE);
+            tv_center_text.setVisibility(GONE);
+            tv_right_text.setVisibility(VISIBLE);
+            iv_right_image.setVisibility(GONE);
         } else {
             tv_left_text.setVisibility(GONE);
             iv_left_image.setVisibility(VISIBLE);

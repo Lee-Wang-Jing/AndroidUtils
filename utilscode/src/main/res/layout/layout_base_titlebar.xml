@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="wrap_content">
     <!--left start-->
     <FrameLayout
         android:id="@+id/fl_left"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_line"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/fl_center"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#cc0000">
 
         <TextView
             android:id="@+id/tv_left_text"
@@ -28,8 +29,10 @@
 
         <ImageView
             android:id="@+id/iv_left_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
             android:visibility="gone"
             tools:background="@mipmap/wj_ic_back"
             tools:visibility="visible" />
@@ -43,7 +46,7 @@
         android:id="@+id/fl_center"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_line"
         app:layout_constraintLeft_toRightOf="@+id/fl_left"
         app:layout_constraintRight_toLeftOf="@+id/fl_right"
         app:layout_constraintTop_toTopOf="parent">
@@ -68,10 +71,11 @@
         android:id="@+id/fl_right"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_line"
         app:layout_constraintLeft_toRightOf="@+id/fl_center"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#cc0000">
 
         <TextView
             android:id="@+id/tv_right_text"
@@ -87,11 +91,24 @@
 
         <ImageView
             android:id="@+id/iv_right_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
             android:visibility="gone"
             tools:background="@mipmap/wj_ic_back"
             tools:visibility="visible" />
     </FrameLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
